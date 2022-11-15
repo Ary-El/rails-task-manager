@@ -13,8 +13,17 @@
   </head>
 
   <body>
-  <div class="container-md">
-    <%= yield %>
+  <nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold">Tasks Manager</a>
+    <form class="d-flex">
+      <input class="form-control me-2 fst-italic" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success fw-bold bg-darklight" type="submit">ENTER</button>
+    </form>
   </div>
+</nav>
+
+    <%= yield %>
+
   </body>
 </html>

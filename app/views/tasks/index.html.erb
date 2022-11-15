@@ -1,8 +1,10 @@
 
-  <ul class="list-group">
+  <ul class=" ps-5 mt-5 ">
     <% @tasks.each do |task| %>
-      <li><%= task.title %></li>
+    <div class=" d-flex ps-3 gap-5 bg-light border border-dark shadow p-3 mb-5 bg-body rounded mb-3 text-capitalize">
+      <p><%= task.title %></p>
       <%= link_to "Delete", task_delete_path(task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    </div>
     <% end %>
   </ul>
 
